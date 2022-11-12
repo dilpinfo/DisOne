@@ -273,7 +273,7 @@ Responsive CSS
         right: auto;
     }
     .mean-container .mean-nav ul li a {
-        text-align: right;
+        text-align: left;
     }
     .mobile-nav .logo {
         right: 15px !important;

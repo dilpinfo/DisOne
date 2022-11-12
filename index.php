@@ -379,36 +379,36 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="msg-header">
-                    <div id= "chatName" class="chat-bubble you">
-                    <div class="col-lg-12 text-center mb-2">
+                    <div class="chat-bubble you" id= "chatName" >
                     <script>
                     var iniciar = document.getElementById("btnIniciar");
                         iniciar.addEventListener("click", function(){
                         var nombre = document.getElementById("nombre").value;
-                        var mensaje = "Bienvenido " + nombre + ", en que te puedo ayudar? ";
+                        var mensaje = "Hola, " + nombre + " en que te puedo ayudar";
                         // alert(nombre);
-                        document.getElementById("chatName").innerHTML = mensaje;   
+                        document.getElementById("chatName").innerHTML = mensaje;
+                           
                         });
                     </script> 
-                    </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="chat-input hide">
+        
+    </div>
+    </div>
+    <div class="chat-input hide">
         <input id= "data" type="text" placeholder="Escribe tu pregunta">
         <div class="input-action-icon">
         <a><svg xmlns="http://www.w3.org/2000/svg" id="send-btn" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
         </div>
-    </div>
-    </div>
     </div>
     
     <script>
         $(document).ready(function(){
             $("#send-btn").on("click", function(){
                 $value = $("#data").val();
-                $msg = '<div class="bot-inbox inbox"><div class="chat-bubble me"><p>'+ $value +'</p></div></div>';
+                $msg = '<div class="msg-header"><div class="chat-bubble me"><p>'+ $value +'</p></div></div>';
                 $(".form").append($msg);
                 $("#data").val('');
                 
@@ -418,7 +418,7 @@
                     type: 'POST',
                     data: 'text='+$value,
                     success: function(result){
-                        $replay = '<div class="bot-inbox inbox"><div class="chat-bubble you"><p>'+ result +'</p></div></div>';
+                        $replay = '<div class="bot-inbox inbox"><div class="chat-bubble you">'+ result +'</div></div>';
                         $(".form").append($replay);
                         $(".form").scrollTop($(".form")[0].scrollHeight);
                     }
