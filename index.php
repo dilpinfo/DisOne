@@ -315,8 +315,10 @@
   <!-- Chat bot UI start -->
   <div class="chat-screen">
     <div class="chat-header">
-        <div class="chat-header-titler">
-         Chatbot - Virtual Trunk
+        <div class="chat-header-title">
+         <div class="col-lg-12 text-center mb-2">
+        Chatbot - Virtual Trunk
+        </div>
         </div>
         <div class="chat-header-option hide">
             <span class="dropdown custom-dropdown">
@@ -341,12 +343,15 @@
             <div class="col-lg-12 text-center mb-2">
                 <p>Hola 👋 <br>Bienvenidos al baúl de las inquietudes</p>		
             </div>
+
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
                     <input id="nombre" type="text" class="form-control center" placeholder="Ingrese su Nombre">
                 </div>
+
+
             </div>
             
             <div class="col-lg-12">
@@ -375,16 +380,18 @@
                 </div>
                 <div class="msg-header">
                     <div id= "chatName" class="chat-bubble you">
-        <script>
-           var iniciar = document.getElementById("btnIniciar");
-            iniciar.addEventListener("click", function(){
-            var nombre = document.getElementById("nombre").value;
-            var mensaje = "Bienvenido " + nombre + ", en que te puedo ayudar? ";
-            // alert(nombre);
-            document.getElementById("chatName").innerHTML = mensaje;   
-            });
-        </script> 
-        </div>
+                    <div class="col-lg-12 text-center mb-2">
+                    <script>
+                    var iniciar = document.getElementById("btnIniciar");
+                        iniciar.addEventListener("click", function(){
+                        var nombre = document.getElementById("nombre").value;
+                        var mensaje = "Bienvenido " + nombre + ", en que te puedo ayudar? ";
+                        // alert(nombre);
+                        document.getElementById("chatName").innerHTML = mensaje;   
+                        });
+                    </script> 
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -413,7 +420,6 @@
                     success: function(result){
                         $replay = '<div class="bot-inbox inbox"><div class="chat-bubble you"><p>'+ result +'</p></div></div>';
                         $(".form").append($replay);
-                        // when chat goes down the scroll bar automatically comes to the bottom
                         $(".form").scrollTop($(".form")[0].scrollHeight);
                     }
                 });

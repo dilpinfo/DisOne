@@ -5,7 +5,7 @@ include ('conexion.php');
 // usuario ajax
 $getMesg = mysqli_real_escape_string($conn, $_POST['text']);
 
-//buscardato de la tabla chatbot
+//buscar dato de la tabla chatbot
 $check_data = "SELECT Respuesta FROM chatbot WHERE Consulta LIKE '%$getMesg%'";
 $run_query = mysqli_query($conn, $check_data) or die("Error");
 
@@ -17,7 +17,7 @@ if(mysqli_num_rows($run_query) > 0){
     $replay = $fetch_data['Respuesta'];
     echo $replay;
 }else{
-    echo "Lo siento no comprendo";
+    echo "Lo siento, no comprendo tu pregunta";
 }
 
 ?>
