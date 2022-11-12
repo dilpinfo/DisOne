@@ -1,19 +1,19 @@
 <?php
-// connecting to database
+// inclusion de la conexion
 //$conn = mysqli_connect("localhost", "root", "", "virtualTrunk") or die("Database Error");
 include ('conexion.php');
-// getting user message through ajax
+// usuario ajax
 $getMesg = mysqli_real_escape_string($conn, $_POST['text']);
 
-//checking user query to database query
+//buscardato de la tabla chatbot
 $check_data = "SELECT Respuesta FROM chatbot WHERE Consulta LIKE '%$getMesg%'";
 $run_query = mysqli_query($conn, $check_data) or die("Error");
 
-// if user query matched to database query we'll show the reply otherwise it go to else statement
+// encontramos consultas de la fila
 if(mysqli_num_rows($run_query) > 0){
-    //fetching replay from the database according to the user query
+    //resultado de consulta
     $fetch_data = mysqli_fetch_assoc($run_query);
-    //storing replay to a varible which we'll send to ajax
+    //respuestas a traves de ajax
     $replay = $fetch_data['Respuesta'];
     echo $replay;
 }else{

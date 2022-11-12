@@ -44,7 +44,7 @@
 
     <title>VIRTUAL TRUNK</title>
 
-    <link rel="icon" type="image/png" href="assets/images/chatbot.ico">
+    <link rel="icon" type="image/p0ng" href="assets/images/chatbot.ico">
 </head>
 
 <body>
@@ -343,7 +343,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12">
                 <div class="form-group">
                     <input id="nombre" type="text" class="form-control center" placeholder="Ingrese su Nombre">
                 </div>
