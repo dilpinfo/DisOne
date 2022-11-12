@@ -370,7 +370,7 @@
           year = date.getFullYear();
           month = date.getMonth() + 1;
           day = date.getDate();
-          document.getElementById("current_date").innerHTML = month + "/" + day + "/" + year;   
+          document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;   
        </script>
        </div>
         <div class="form form-center">
