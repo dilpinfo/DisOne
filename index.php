@@ -351,7 +351,9 @@
     <div class="chat-mail">
         <div class="row">
             <div class="col-lg-12 text-center mb-2">
-                <span>Hola  👋 <br>Bienvenidos al baúl de las inquietudes</span>		
+                <span>Hola  👋 <br>Bienvenidos al baúl de las inquietudes</span>
+                <br><br>
+                <img src="assets/images/logo1.png" width="40px" height=" 40px" alt="virtualTrunk" />		
             </div>
 
         </div>
