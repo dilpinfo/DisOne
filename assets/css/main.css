@@ -3,7 +3,7 @@ html { min-height: 100% }
 body {
     color: #888ea8;
     height: 100%;
-    font-size: 0.875rem;
+    font-size: 16px;
     background: #f1f2f3;
     overflow-x: hidden;
     overflow-y: auto;

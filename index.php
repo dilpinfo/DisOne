@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewportChatbot" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=yes">
-  
+    <script src="https://kit.fontawesome.com/dd4bbad86c.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.rtl.min.css" />
     <!-- MeanMenu CSS -->
@@ -79,7 +79,7 @@
                         <img src="assets/images/logo2.png" class="white-logo" alt="logo"/>
                     </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                        <ul class="navbar-nav text-right">
+                        <ul class="navbar-nav text-left">
                              <li class="nav-item">
                                 <a href="#" class="nav-link dropdown-toggle">Galerias</a>
                                 <ul class="dropdown-menu">
@@ -311,7 +311,17 @@
     <!-- Main js -->
     <script src="assets/js/main.js"></script>
 
-   <!-- Inclusion del chatbot -->
+  
+
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="257be86a981729866f2fa61c-|49" defer=""></script>
+<!-- Time line Html Ends -->
+<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+<script src="assets/js/jquery-3.1.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/select2.min.js"></script>
+ 
+  <!-- Inclusion del chatbot -->
   <!-- Chat bot UI start -->
   <div class="chat-screen">
     <div class="chat-header">
@@ -341,7 +351,7 @@
     <div class="chat-mail">
         <div class="row">
             <div class="col-lg-12 text-center mb-2">
-                <p>Hola 👋 <br>Bienvenidos al baúl de las inquietudes</p>		
+                <span>Hola  👋 <br>Bienvenidos al baúl de las inquietudes</span>		
             </div>
 
         </div>
@@ -364,27 +374,27 @@
     </div>
     <div class="chat-body hide">
     <div class="wrapper">
-    <div id="current_date" class="chat-start">
-        <script>
-          date = new Date();
-          year = date.getFullYear();
-          month = date.getMonth() + 1;
-          day = date.getDate();
-          document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;   
-       </script>
+        <div id="current_date" class="chat-start">
+            <script>
+            date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            document.getElementById("current_date").innerHTML =" ** "+ day + "/" + month + "/" + year + " ** ";   
+            </script>
        </div>
-        <div class="form form-center">
+        <div class="form">
             <div class="bot-inbox inbox">
                 <div class="icon">
-                    <i class="fas fa-user"></i>
-                </div>
+                <i class="fa fa-duotone fa-robot"></i>
+             </div>
                 <div class="msg-header">
                     <div class="chat-bubble you" id= "chatName" >
                     <script>
                     var iniciar = document.getElementById("btnIniciar");
                         iniciar.addEventListener("click", function(){
                         var nombre = document.getElementById("nombre").value;
-                        var mensaje = "Hola, " + nombre + " en que te puedo ayudar";
+                        var mensaje = "Hola "+ nombre + " Soy Virtual Trunk, asistente virtual, ¿cómo puedo ayudarte?";
                         // alert(nombre);
                         document.getElementById("chatName").innerHTML = mensaje;
                            
@@ -394,21 +404,20 @@
                 </div>
             </div>
         </div>
-        
     </div>
     </div>
+    
     <div class="chat-input hide">
         <input id= "data" type="text" placeholder="Escribe tu pregunta">
         <div class="input-action-icon">
         <a><svg xmlns="http://www.w3.org/2000/svg" id="send-btn" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
         </div>
-    </div>
-    
+    </div>  
     <script>
         $(document).ready(function(){
             $("#send-btn").on("click", function(){
                 $value = $("#data").val();
-                $msg = '<div class="msg-header"><div class="chat-bubble me"><p>'+ $value +'</p></div></div>';
+                $msg = '<div class="icon"><i class="fa fa-duotone fa-user-group"></i></div><div class="msg-header"><div class="chat-bubble me"><p>'+ $value +'</p></div></div>';
                 $(".form").append($msg);
                 $("#data").val('');
                 
@@ -418,7 +427,7 @@
                     type: 'POST',
                     data: 'text='+$value,
                     success: function(result){
-                        $replay = '<div class="bot-inbox inbox"><div class="chat-bubble you">'+ result +'</div></div>';
+                        $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fa fa-duotone fa-robot"></i></div><div class="msg-header"><p>'+ result +'</p></div></div>';
                         $(".form").append($replay);
                         $(".form").scrollTop($(".form")[0].scrollHeight);
                     }
@@ -438,14 +447,8 @@
 </div>
 <!-- Chat Bot UI Ends -->
 
-
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="257be86a981729866f2fa61c-|49" defer=""></script>
-<!-- Time line Html Ends -->
-<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-<script src="assets/js/jquery-3.1.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/select2.min.js"></script>
+ 
+ 
  <script>
         $(document).ready(function(){
             $(".select2_el").select2({

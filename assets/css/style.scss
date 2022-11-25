@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:500,700,800,900|Poppins:400,500,600,700,800&display=swap');
 // Variables 
 $h1-size:40px;
-$h2-size:35px;
+$h2-size:40px;
 $h3-size:28px;
 $h4-size:22px;
 $HeadingFonts:'Playfair Display',
@@ -420,7 +420,7 @@ a.scroll-top {
                     }
                     a {
                         font: {
-                            size: 16px;
+                            size: 50px;
                             weight: 400;
                         }
                         color: #181818;
@@ -787,13 +787,14 @@ a.scroll-top {
                     font-weight: 500;
                 }
                 h1 {
-                    font-size: 75px;
+                    font-size: 90px;
                     font-weight: bold;
                     color: #fff;
                     font-family: $HeadingFonts;
                 }
                 p {
                     margin-top: 20px;
+
                     color: #fff;
                     padding: 0 14%;
                     font-family: $BodyFonts;
@@ -849,7 +850,7 @@ a.scroll-top {
             height: 35px;
             border-radius: 50%;
             border: none;
-            font-size: 16px;
+            font-size: 20px;
             line-height: 0;
             top: 50%;
             position: absolute;
@@ -1307,7 +1308,7 @@ a.scroll-top {
                     position: absolute;
                     bottom: 10px;
                     text-align: center;
-                    font-size: 30px;
+                    font-size: 45px;
                     width: 100%;
                     font-family: $HeadingFonts;
                     color: #fff;
@@ -1530,7 +1531,7 @@ a.scroll-top {
             padding: 30px;
             box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
             h2 {
-                font-size: 20px;
+                font-size: 40px;
                 font-weight: 600;
                 font-family: $HeadingFonts;
                 margin-bottom: 15px;
