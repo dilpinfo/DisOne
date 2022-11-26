@@ -4968,6 +4968,7 @@ a.scroll-top i {
     min-height: 400px;
     max-height: 400px;
     overflow-y: auto;
+    text-overflow: clip;
 }
 .wrapper .form .inbox{
     width: 100%;
