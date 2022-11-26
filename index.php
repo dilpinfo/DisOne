@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="es" dir="rtl">
 <head>
     <!-- Required meta tags -->
-    <meta charset="UTF-8" />
+    <meta charset="ISO 8859-1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewportChatbot" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=yes">
@@ -38,7 +38,7 @@
      <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/chatBot.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/timeline.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
