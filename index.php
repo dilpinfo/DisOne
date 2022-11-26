@@ -350,12 +350,14 @@
     </div>
     <div class="chat-mail">
         <div class="row">
-            <div class="col-lg-12 text-center mb-2">
-                <span>Hola  👋 <br>Bienvenidos al baúl de las inquietudes</span>
-                <br><br>
-                <img src="assets/images/logo1.png" width="40px" height=" 40px" alt="virtualTrunk" />		
+        <div class="col-lg-12 text-center mb-2">
+                <img src="assets/images/logo1.png" width="70px" height=" 70px" alt="virtualTrunk" />		
             </div>
-
+            <div class="col-lg-12 text-center mb-2">
+            <br>    
+            <span>Hola  👋 Bienvenidos al baúl de las inquietudes</span>		
+        <br>    
+        </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -367,7 +369,7 @@
             </div>
             
             <div class="col-lg-12">
-                <button id="btnIniciar" class="btn btn-primary btn-rounded btn-block">Iniciar</button>
+             <button id="btnIniciar" class="btn btn-primary btn-rounded btn-block">Iniciar</button>
             </div>
            <div class="col-lg-12">
                <div class="powered-by">Equipo DisOne</div>
@@ -376,6 +378,7 @@
     </div>
     <div class="chat-body hide">
     <div class="wrapper">
+        <div class="custom-scroll">
         <div id="current_date" class="chat-start">
             <script>
             date = new Date();
@@ -385,27 +388,28 @@
             document.getElementById("current_date").innerHTML =" ** "+ day + "/" + month + "/" + year + " ** ";   
             </script>
        </div>
-        <div class="form">
+       <!--inicia formulario con funcion de scroll menor grosor-->
+        <div class="form  custom-scroll">
             <div class="bot-inbox inbox">
-                <div class="icon">
-                <i class="fa fa-duotone fa-robot"></i>
+            <div class="icon">
+            <i class="fa fa-user"></i>
              </div>
                 <div class="msg-header">
-                    <div class="chat-bubble you" id= "chatName" >
-                    <script>
-                    var iniciar = document.getElementById("btnIniciar");
-                        iniciar.addEventListener("click", function(){
-                        var nombre = document.getElementById("nombre").value;
-                        var mensaje = "Hola "+ nombre + " Soy Virtual Trunk, asistente virtual, ¿cómo puedo ayudarte?";
-                        // alert(nombre);
-                        document.getElementById("chatName").innerHTML = mensaje;
-                           
-                        });
-                    </script> 
+                        <div class="chat-bubble you" id= "chatName" >
+                        <script>
+                        var iniciar = document.getElementById("btnIniciar");
+                            iniciar.addEventListener("click", function(){
+                            var nombre = document.getElementById("nombre").value;
+                            var mensaje = "Hola "+ nombre + " Soy Virtual Trunk, asistente virtual, ¿cómo puedo ayudarte?";
+                            // alert(nombre);
+                            document.getElementById("chatName").innerHTML = mensaje;                           
+                            });
+                        </script> 
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
     
@@ -419,7 +423,7 @@
         $(document).ready(function(){
             $("#send-btn").on("click", function(){
                 $value = $("#data").val();
-                $msg = '<div class="icon"><i class="fa fa-duotone fa-user-group"></i></div><div class="msg-header"><div class="chat-bubble me"><p>'+ $value +'</p></div></div>';
+                $msg = '<div class="icon"><i class="fa fa-duotone fa-user-group"></i></div><div class="msg-header"><div class="chat-bubble me">'+ $value +'</div></div>';
                 $(".form").append($msg);
                 $("#data").val('');
                 
@@ -429,7 +433,7 @@
                     type: 'POST',
                     data: 'text='+$value,
                     success: function(result){
-                        $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fa fa-duotone fa-robot"></i></div><div class="msg-header"><p>'+ result +'</p></div></div>';
+                        $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fa fa-user"></i></div><div class="msg-header"><div class="chat-bubble you">'+ result +'</div></div></div>';
                         $(".form").append($replay);
                         $(".form").scrollTop($(".form")[0].scrollHeight);
                     }

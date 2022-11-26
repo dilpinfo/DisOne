@@ -4938,8 +4938,21 @@ a.scroll-top i {
     border-radius: 20px;
     border: 1px solid #ffc107;
     border-top: 0px;
-    overflow: auto;
+    overflow-y: auto; 
 }
+ 
+/*Style barra de desplazamiento*/
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background-color: blue;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: orange;
+}
+/*Fin de la configuracion de la barra de desplazamiento*/
+
 .wrapper .title{
     background: #007bff;
     color: #fff;
@@ -4977,7 +4990,7 @@ a.scroll-top i {
     background: #007bff;
 }
 .wrapper .form .inbox .msg-header{
-    max-width: 60%;
+    max-width: 90%;
     margin-left: 10px;
 }
 .form .inbox .msg-header p{
@@ -4985,7 +4998,8 @@ a.scroll-top i {
     background: #007bff;
     border-radius: 10px;
     padding: 12px 5px;
-    font-size: 14px;
+    font-size: small;
+    max-width: 80%;
     word-break: break-all;
 }
 .form .user-inbox .msg-header p{

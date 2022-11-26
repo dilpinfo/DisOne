@@ -105,7 +105,7 @@
    
 }
 .chat-screen .chat-body .chat-bubble {
-    font-size: 16px;
+    font-size: small;
     padding: 10px 15px;
     box-shadow: 0 1px 2px #ccc;
     display: inline-block;
@@ -238,7 +238,7 @@
     line-height: 20px;
 }
 .chat-screen .powered-by {
-    margin-top: 250px;
+    margin-top: 200px;
     text-align: center;
     font-size: 18px;
     border-radius: 1em;
