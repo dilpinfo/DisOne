@@ -1,6 +1,6 @@
 
 <?php
-header('Content-Type: charset=utf-8');
+header('Content-Type: charset=ISO 8859-1');
 // inclusion de la conexion
 //$conn = mysqli_connect("localhost", "root", "", "virtualTrunk") or die("Database Error");
 include ('conexion.php');
