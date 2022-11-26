@@ -12,6 +12,7 @@ $check_data = "SELECT Resp FROM chatbot
 Inner join consulta on chatbot.idconsulta=consulta.idconsulta
 inner join respuestas on chatbot.idRespuestas=respuestas.idRespuestas
 WHERE consulta.consult LIKE '%$getMesg%'";
+//
 
 //$check_data = "SELECT Respuesta FROM chatbot WHERE Consulta LIKE '%$getMesg%'";
 $run_query = mysqli_query($conn, $check_data) or die("Error");
