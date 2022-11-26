@@ -38,7 +38,7 @@
      <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/chatBot.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/timeline.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
