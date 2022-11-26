@@ -400,7 +400,7 @@
                         var iniciar = document.getElementById("btnIniciar");
                             iniciar.addEventListener("click", function(){
                             var nombre = document.getElementById("nombre").value;
-                            var mensaje = "Hola "+ nombre + " Soy Virtual Trunk, asistente virtual, ¿cómo puedo ayudarte?";
+                            var mensaje = "Hola "+ nombre + " Soy Virtual Trunk, asistente virtual ¿cómo puedo ayudarte";
                             // alert(nombre);
                             document.getElementById("chatName").innerHTML = mensaje;                           
                             });

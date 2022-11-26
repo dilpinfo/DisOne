@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "virtualTrunk";
+$database = "disone_virtualTrunk";
 $username = "root";
 $password = "";
 // Create connection
